@@ -1,0 +1,109 @@
+public class hitting {
+    private int redherb;
+    private int orangeherb;
+    private int blueherb;
+    private int redpotion;
+    private int orangepotion;
+    private int bluepotion;
+    private boolean newbie;
+    private boolean rich;
+    private double sum;
+    
+    
+
+    
+
+    public hitting(int redherb, int orangeherb, int blueherb, int redpotion, 
+            int orangepotion, int bluepotion, boolean newbie, boolean rich) {
+        if(redherb>=0 && orangeherb>=0 && blueherb>=0
+                && redpotion>=0 && orangepotion>=0 && bluepotion>=0){
+    }
+        this.redherb = redherb;
+        this.orangeherb = orangeherb;
+        this.blueherb = blueherb;
+        this.redpotion = redpotion;
+        this.orangepotion = orangepotion;
+        this.bluepotion = bluepotion;
+        this.newbie = newbie;
+        this.rich = rich;
+        
+        
+        sum=redherb*150+orangeherb*300+blueherb*500+redpotion*299
+                +orangepotion*599+bluepotion*999;
+        
+        if(newbie==true) sum=(sum*0.8);
+        
+        
+        
+    }
+
+    
+    
+
+    public int getRedherb() {
+        return redherb;
+    }
+
+    public void setRedherb(int redherb) {
+        this.redherb = redherb;
+    }
+
+    public int getOrangeherb() {
+        return orangeherb;
+    }
+
+    public void setOrangeherb(int orangeherb) {
+        this.orangeherb = orangeherb;
+    }
+
+    public int getBlueherb() {
+        return blueherb;
+    }
+
+    public void setBlueherb(int blueherb) {
+        this.blueherb = blueherb;
+    }
+    
+    public int getRedpotion() {
+        return redpotion;
+    }
+
+    public void setRedpotion(int redpotion) {
+        this.redpotion = redpotion;
+    }
+    
+    public int getOrangepotion() {
+        return orangepotion;
+    }
+
+    public void setOrangepotion(int orangepotion) {
+        this.orangepotion = orangepotion;
+    }
+    
+     public int getBluepotion() {
+        return bluepotion;
+    }
+
+    public void setBluepotion(int bluepotion) {
+        this.bluepotion = bluepotion;
+    }
+
+    public double getSum() {
+        return sum;
+    }
+
+
+   
+String show()
+    {
+        {return "紅藥草:"+getRedherb()+
+                "\n橘藥草:"+getOrangeherb()+
+                "\n藍藥草:"+getBlueherb()+
+                "\n紅藥水:"+getRedpotion()+
+                "\n橘藥水:"+getOrangepotion()+
+                "\n藍藥水:"+getBluepotion()+
+                "\n總費用:"+getSum();
+        }
+    }
+}        
+        
