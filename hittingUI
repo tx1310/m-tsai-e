@@ -40,6 +40,11 @@ public class hittingUI extends javax.swing.JFrame {
         ok = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         output = new javax.swing.JTextArea();
+        jLabel10 = new javax.swing.JLabel();
+        pay = new javax.swing.JTextField();
+        okpay = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        changeoutput = new javax.swing.JTextArea();
 
         jCheckBox1.setText("jCheckBox1");
 
@@ -217,42 +222,77 @@ public class hittingUI extends javax.swing.JFrame {
             }
         });
 
+        output.setBackground(new java.awt.Color(204, 204, 255));
         output.setColumns(20);
         output.setRows(5);
         jScrollPane1.setViewportView(output);
+
+        jLabel10.setText("付款金額：");
+
+        okpay.setText("確認付款");
+        okpay.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                okpayMouseClicked(evt);
+            }
+        });
+
+        changeoutput.setColumns(20);
+        changeoutput.setRows(5);
+        jScrollPane2.setViewportView(changeoutput);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(19, 19, 19)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
                         .addComponent(ok)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(pay, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(okpay)))
+                .addContainerGap(16, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(108, 108, 108))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ok)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ok)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(pay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5)
+                        .addComponent(okpay)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))))
         );
 
         pack();
@@ -293,34 +333,40 @@ public class hittingUI extends javax.swing.JFrame {
         boolean Newbie=newbie.isSelected();
         boolean Rich=rich.isSelected();
         
-        
-        
-        Integer RH=new Integer(Redherb);
-        Integer OH=new Integer(Orangeherb);
-        Integer BH=new Integer(Blueherb);
-        Integer RP=new Integer(Redpotion);
-        Integer OP=new Integer(Orangepotion);
-        Integer BP=new Integer(Bluepotion);
-    
-        hitting s=new hitting(RH,OH,BH,RP,OP,BP);
-        
-        
+        int RH=Integer.parseInt(Redherb);
+        int OH=Integer.parseInt(Orangeherb);
+        int BH=Integer.parseInt(Blueherb);
+        int RP=Integer.parseInt(Redpotion);
+        int OP=Integer.parseInt(Orangepotion);
+        int BP=Integer.parseInt(Bluepotion);
+   
+        hitting s=new hitting(RH,OH,BH,RP,OP,BP,Newbie,Rich);
+       
         output.setText(s.show());
-        
-
+     
     
     }                               
 
     private void newbieMouseClicked(java.awt.event.MouseEvent evt) {                                    
         if(newbie.isSelected())
             newbie.setSelected(true);
-// TODO add your handling code here:
+
     }                                   
 
     private void richMouseClicked(java.awt.event.MouseEvent evt) {                                  
         if(rich.isSelected())
-            rich.setSelected(true);// TODO add your handling code here:
+            rich.setSelected(true);
     }                                 
+
+    private void okpayMouseClicked(java.awt.event.MouseEvent evt) {                                   
+        String Pay=pay.getText();
+        
+        int PAY=Integer.parseInt(Pay);
+        
+        hitting p=new hitting(PAY);
+        
+        changeoutput.setText(p.show());
+    }                                  
 
     /**
      * @param args the command line arguments
@@ -361,8 +407,10 @@ public class hittingUI extends javax.swing.JFrame {
     private javax.swing.JTextField blueherb;
     private javax.swing.JTextField bluepotion;
     private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.JTextArea changeoutput;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -374,11 +422,14 @@ public class hittingUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JRadioButton newbie;
     private javax.swing.JButton ok;
+    private javax.swing.JButton okpay;
     private javax.swing.JTextField orangeherb;
     private javax.swing.JTextField orangepotion;
     private javax.swing.JTextArea output;
+    private javax.swing.JTextField pay;
     private javax.swing.JTextField redherb;
     private javax.swing.JTextField redpotion;
     private javax.swing.JRadioButton rich;
