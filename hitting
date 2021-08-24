@@ -7,8 +7,8 @@ public class hitting {
     private int bluepotion;
     private boolean newbie;
     private boolean rich;
-    private double sum;
-    
+    private int sum;
+    private int pay;
     
 
     
@@ -31,15 +31,13 @@ public class hitting {
         sum=redherb*150+orangeherb*300+blueherb*500+redpotion*299
                 +orangepotion*599+bluepotion*999;
         
-        if(newbie==true) sum=(sum*0.8);
+        if(newbie==true) sum=(int)(sum*0.8);
         
-        
-        
+        else if(rich==true) sum=(int)(sum*1.2);
+       
     }
 
     
-    
-
     public int getRedherb() {
         return redherb;
     }
@@ -88,11 +86,17 @@ public class hitting {
         this.bluepotion = bluepotion;
     }
 
-    public double getSum() {
+    public int getSum() {
         return sum;
     }
-
-
+    
+    public int getPay() {
+        return pay;
+    }
+    
+    public void setPay(int pay){
+        this.pay = pay;
+    }
    
 String show()
     {
@@ -105,5 +109,13 @@ String show()
                 "\n總費用:"+getSum();
         }
     }
+
+String show p()
+    {return "找您 千元 x:"+
+            "\n找您 百元 x"+
+            "\n找您 十元 x"+
+            "\n找您 一元 x";
+    }
 }        
         
+   
