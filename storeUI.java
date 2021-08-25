@@ -1,4 +1,5 @@
 public class storeUI extends javax.swing.JFrame {
+    private HerbStore s;
 
     /**
      * Creates new form hittingUI
@@ -323,28 +324,26 @@ public class storeUI extends javax.swing.JFrame {
     }                                          
 
     private void okMouseClicked(java.awt.event.MouseEvent evt) {                                
+        String Redherb = redherb.getText(); 
+        String Orangeherb = orangeherb.getText();
+        String Blueherb = blueherb.getText();
+        String Redpotion = redpotion.getText();
+        String Orangepotion = orangepotion.getText();
+        String Bluepotion = bluepotion.getText();
+        boolean Newbie = newbie.isSelected();
+        boolean Rich = rich.isSelected();
         
-        String Redherb=redherb.getText();
-        String Orangeherb=orangeherb.getText();
-        String Blueherb=blueherb.getText();
-        String Redpotion=redpotion.getText();
-        String Orangepotion=orangepotion.getText();
-        String Bluepotion=bluepotion.getText();
-        boolean Newbie=newbie.isSelected();
-        boolean Rich=rich.isSelected();
-        
-        int RH=Integer.parseInt(Redherb);
-        int OH=Integer.parseInt(Orangeherb);
-        int BH=Integer.parseInt(Blueherb);
-        int RP=Integer.parseInt(Redpotion);
-        int OP=Integer.parseInt(Orangepotion);
-        int BP=Integer.parseInt(Bluepotion);
+        int RH = Integer.parseInt(Redherb);
+        int OH = Integer.parseInt(Orangeherb);
+        int BH = Integer.parseInt(Blueherb);
+        int RP = Integer.parseInt(Redpotion);
+        int OP = Integer.parseInt(Orangepotion);
+        int BP = Integer.parseInt(Bluepotion);
    
-        store s=new store(RH,OH,BH,RP,OP,BP,Newbie,Rich);
-       
-        output.setText(s.show());
-     
-    
+        // s is a object of Store
+        s.setStore(RH, OH, BH, RP, OP, BP, Newbie, Rich);
+
+        output.setText(s.showStore());
     }                               
 
     private void newbieMouseClicked(java.awt.event.MouseEvent evt) {                                    
@@ -358,14 +357,14 @@ public class storeUI extends javax.swing.JFrame {
             rich.setSelected(true);
     }                                 
 
-    private void okpayMouseClicked(java.awt.event.MouseEvent evt) {                                   
-        String Pay=pay.getText();
+    private void okpayMouseClicked(java.awt.event.MouseEvent evt) {                              
+        String Pay = pay.getText();
         
-        int PAY=Integer.parseInt(Pay);
+        int PAY = Integer.parseInt(Pay);
         
-        store p=new store(PAY);
+        s.setPay(PAY);
         
-        changeoutput.setText(p.show());
+        changeoutput.setText(s.showChange());
     }                                  
 
     /**
