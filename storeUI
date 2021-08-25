@@ -1,9 +1,9 @@
-public class hittingUI extends javax.swing.JFrame {
+public class storeUI extends javax.swing.JFrame {
 
     /**
      * Creates new form hittingUI
      */
-    public hittingUI() {
+    public storeUI() {
         initComponents();
     }
 
@@ -340,7 +340,7 @@ public class hittingUI extends javax.swing.JFrame {
         int OP=Integer.parseInt(Orangepotion);
         int BP=Integer.parseInt(Bluepotion);
    
-        hitting s=new hitting(RH,OH,BH,RP,OP,BP,Newbie,Rich);
+        store s=new store(RH,OH,BH,RP,OP,BP,Newbie,Rich);
        
         output.setText(s.show());
      
@@ -363,7 +363,7 @@ public class hittingUI extends javax.swing.JFrame {
         
         int PAY=Integer.parseInt(Pay);
         
-        hitting p=new hitting(PAY);
+        store p=new store(PAY);
         
         changeoutput.setText(p.show());
     }                                  
@@ -385,20 +385,21 @@ public class hittingUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(hittingUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(storeUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(hittingUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(storeUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(hittingUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(storeUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(hittingUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(storeUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new hittingUI().setVisible(true);
+                new storeUI().setVisible(true);
             }
         });
     }
