@@ -1,4 +1,4 @@
-public class hitting {
+public class store {
     private int redherb;
     private int orangeherb;
     private int blueherb;
@@ -14,9 +14,9 @@ public class hitting {
 
     
 
-    public hitting(int redherb, int orangeherb, int blueherb, int redpotion, 
-            int orangepotion, int bluepotion, boolean newbie, boolean rich, 
-            int change) {
+    public store(int redherb, int orangeherb, int blueherb, int redpotion, 
+            int orangepotion, int bluepotion, boolean newbie, boolean rich
+            ) {
         if(redherb>=0 && orangeherb>=0 && blueherb>=0
                 && redpotion>=0 && orangepotion>=0 && bluepotion>=0){
     }
@@ -29,6 +29,7 @@ public class hitting {
         this.newbie = newbie;
         this.rich = rich;
         this.pay = pay;
+        this.change =change;
         
         
         sum=redherb*150+orangeherb*300+blueherb*500+redpotion*299
@@ -37,8 +38,12 @@ public class hitting {
         if(newbie==true) sum=(int)(sum*0.8);
         
         else if(rich==true) sum=(int)(sum*1.2);
+        
+        change=sum-pay;
        
     }
+
+
 
     
     public int getRedherb() {
