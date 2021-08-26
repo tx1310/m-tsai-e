@@ -129,7 +129,7 @@ public class HerbStore {
 
     String showChange()
     {
-        int change = this.sum - this.pay;
+        int change = this.pay - this.sum;
 
         int one = change % 10;
         int ten = (change % 100) / 10;
