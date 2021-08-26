@@ -6,6 +6,7 @@ public class storeUI extends javax.swing.JFrame {
      */
     public storeUI() {
         initComponents();
+        this.s = new HerbStore();
     }
 
     /**
@@ -323,7 +324,7 @@ public class storeUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }                                          
 
-    private void okMouseClicked(java.awt.event.MouseEvent evt) {                                
+    private void okMouseClicked(java.awt.event.MouseEvent evt) {     
         String Redherb = redherb.getText(); 
         String Orangeherb = orangeherb.getText();
         String Blueherb = blueherb.getText();

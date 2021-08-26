@@ -15,6 +15,8 @@ public class HerbStore {
     private int sum;
     private int pay;
 
+    public HerbStore() {}
+
 	public void setStore(int redherb, int orangeherb, int blueherb, int redpotion, 
             int orangepotion, int bluepotion, boolean newbie, boolean rich) 
     {
@@ -29,12 +31,15 @@ public class HerbStore {
     }
     
     public int getRedherb() {
-        return redherb;
+        return this.redherb;
     }
 
     public void setRedherb(int redherb) {
-        if (redherb < 0) return;
-        this.redherb = redherb;
+        if (redherb < 0) {
+            this.redherb = 0;
+        } else {
+            this.redherb = redherb;
+        }
     }
 
     public int getOrangeherb() {
