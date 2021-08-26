@@ -334,12 +334,42 @@ public class storeUI extends javax.swing.JFrame {
         boolean Newbie = newbie.isSelected();
         boolean Rich = rich.isSelected();
         
-        int RH = Integer.parseInt(Redherb);
-        int OH = Integer.parseInt(Orangeherb);
-        int BH = Integer.parseInt(Blueherb);
-        int RP = Integer.parseInt(Redpotion);
-        int OP = Integer.parseInt(Orangepotion);
-        int BP = Integer.parseInt(Bluepotion);
+        int RH, OH, BH, RP, OP, BP;
+        try {
+            RH = Integer.parseInt(Redherb);
+        } catch (NumberFormatException e) {
+            RH = 0;
+        }
+
+        try {
+            OH = Integer.parseInt(Orangeherb);
+        } catch (NumberFormatException e) {
+            OH = 0;
+        }
+
+        try { 
+            BH = Integer.parseInt(Blueherb);
+        } catch (NumberFormatException e) {
+            BH = 0;
+        }
+
+        try {
+            RP = Integer.parseInt(Redpotion);
+        } catch (NumberFormatException e) {
+            RP = 0;
+        }
+
+        try {
+            OP = Integer.parseInt(Orangepotion);
+        } catch (NumberFormatException e) {
+            OP = 0;
+        }
+
+        try {
+            BP = Integer.parseInt(Bluepotion);
+        } catch (NumberFormatException e) {
+            BP = 0;
+        }
    
         // s is a object of Store
         s.setStore(RH, OH, BH, RP, OP, BP, Newbie, Rich);
